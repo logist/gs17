@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'docker.iscinternal.com:5000/isc-cache:stable' }
+        docker { image 'docker.iscinternal.com:5000/isc-cache:stable'  args  '--user root'}
     }
     stages {
         stage('Build') {

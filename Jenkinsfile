@@ -21,6 +21,7 @@ pipeline {
                 	csession CACHE < install.scr && \
                 	ccontrol stop CACHE quietly
                 '''
+                sh 'chmod -R a+r .'                
                 archiveArtifacts artifacts: 'db/app/CACHE.DAT'
             }
         }

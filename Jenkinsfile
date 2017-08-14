@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building'
                 sh 'wget http://kitserver.iscinternal.com/license/cache.key'
-                sh 'cp cache.key /usr/cachesys/mgr/"
+                sh 'cp cache.key /usr/cachesys/mgr/'
                 sh '''
                 	ccontrol start CACHE && \
                 	ccontrol stop CACHE quietly

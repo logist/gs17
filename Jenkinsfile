@@ -21,6 +21,7 @@ pipeline {
                 	csession CACHE < install.scr && \
                 	ccontrol stop CACHE quietly
                 '''
+                archiveArtifacts artifacts: 'db/GS17-APP/CACHE.DAT'
             }
         }
         stage('Test') {

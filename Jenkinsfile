@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                sh 'ccontrol start CACHE && ccontrol stop CACHE'
+                sh 'sudo ccontrol start CACHE && sudo ccontrol stop CACHE'
             }
         }
         stage('Test') {

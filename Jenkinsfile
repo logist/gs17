@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building'
                 sh 'whoami'
-                sh 'sudo ccontrol start CACHE && sudo ccontrol stop CACHE'
+                sh 'ccontrol start CACHE && ccontrol stop CACHE'
             }
         }
         stage('Test') {

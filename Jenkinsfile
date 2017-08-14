@@ -13,7 +13,8 @@ pipeline {
                 sh 'cp cache.key /usr/cachesys/mgr/'
                 sh '''
                 	# add login and password for csession in our installer script
- 					sed -i "1s/^/_SYSTEM\nSYS\n/" install.scr  && \
+ 					echo _SYSTEM >install.scr  && \
+ 					echo SYS >install.scr  && \
  					echo do \\$system.OBJ.Load\\(\\"$PWD/gs17/gs17/Build.cls\\",\\"ck\\"\\) >>install.scr  && \
                 	ccontrol start CACHE && \
                 	csession ensemble < /tmp/install.scr && \

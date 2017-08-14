@@ -17,7 +17,7 @@ pipeline {
  					echo SYS >install.scr  && \
  					echo do \\$system.OBJ.Load\\(\\"$PWD/gs17/gs17/Build.cls\\",\\"ck\\"\\) >>install.scr  && \
                 	ccontrol start CACHE && \
-                	csession ensemble < /tmp/install.scr && \
+                	csession ensemble < install.scr && \
                 	ccontrol stop CACHE quietly
                 '''
             }

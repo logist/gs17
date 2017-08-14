@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
+                sh 'whoami'
                 sh 'sudo ccontrol start CACHE && sudo ccontrol stop CACHE'
             }
         }

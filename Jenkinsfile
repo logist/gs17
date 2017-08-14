@@ -14,7 +14,7 @@ pipeline {
                 sh '''
                 	# add login and password for csession in our installer script
  					echo _SYSTEM >install.scr  && \
- 					echo SYS >install.scr  && \
+ 					echo SYS >>install.scr  && \
  					echo do \\$system.OBJ.Load\\(\\"$PWD/gs17/gs17/Build.cls\\",\\"ck\\"\\) >>install.scr  && \
                 	ccontrol start CACHE && \
                 	csession CACHE < install.scr && \

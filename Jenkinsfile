@@ -7,7 +7,7 @@ node {
 
             stage "Test and validate"
                 sh "echo Testing..."
-                #junit 'reports/**/*.xml'
+                //junit 'reports/**/*.xml'
         }
 
     stage "Cleanup"

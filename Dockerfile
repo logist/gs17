@@ -6,6 +6,9 @@ ENV DESTDIR /opt/gs17
 
 COPY gs17 $DESTDIR
 
+# Copy cache.key if present. Also copy Dockerfile so that it doesn't complain if there is no cache.key
+COPY cache.key* Dockerfile $ISC_PACKAGE_INSTALLDIR/mgr/
+
 RUN chmod -R a+rx $DESTDIR     && \
 	echo _SYSTEM >install.scr  && \
 	echo SYS >>install.scr  && \

@@ -9,7 +9,4 @@ node {
             sh "echo Testing..."
             //junit 'reports/**/*.xml'
         }
-
-    stage "Cleanup"
-        deleteDir()
 }

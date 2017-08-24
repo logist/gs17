@@ -1,13 +1,13 @@
 node {
+	def app
     stage "Prepare environment"
         checkout scm
-        def environment  = docker.build("gs17")
+        app  = docker.build("gs17")
 
-        environment.inside {
-
-            stage "Test and validate"
-                sh "echo Testing..."
-                //junit 'reports/**/*.xml'
+    stage "Test and validate"
+        app.inside {
+            sh "echo Testing..."
+            //junit 'reports/**/*.xml'
         }
 
     stage "Cleanup"

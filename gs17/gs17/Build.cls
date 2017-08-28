@@ -22,6 +22,7 @@ XData BuildManifest
   Description="Build application" 
   Recurse="true" 
   ServeFiles="true"
+  IsNamespaceDefault="true"
    AuthenticationMethods="64" />
 </Configuration>
 
